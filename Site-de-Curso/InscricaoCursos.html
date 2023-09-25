@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de aluno</title>
+</head>
+
+<body>
+
+    <form method="post" action="https://65112ae4829fa0248e3f9726.mockapi.io/Usuario">
+        <fieldset>
+            <legend>Cadastro Aluno</legend>
+            <div>
+                <label>Nome:</label>
+                <input name="nome" required placeholder="Digite o nome">
+            </div>
+            <div>
+                <label>Curso:</label>
+                <select name="curso" required placeholder="Selecione">
+                    <option value="ADS">Analise e Desenvolvimento de Sistemas</option>
+                    <option value="JD">Jogos Digitais</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Salvar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
