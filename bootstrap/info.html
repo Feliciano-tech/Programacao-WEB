@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Style.css" />
+    <title>Detalhes do Produto</title>
+</head>
+
+<body>
+    <div class="container">
+        <a id="voltar" href="index.html"><span id="logo">Imports Store</span></a>
+
+        <div class="row">
+            <!-- Imagem do Produto -->
+            <div class="col-6">
+                <img src="https://t.ctcdn.com.br/arAcG1Ve7ILecoPj6DL9LNeLLHM=/fit-in/400x400/filters:fill(transparent):watermark(wm/prd.png,-32p,center,1,none,15)/i798971.png" class="img-fluid"
+                    style="align-items: center; height: 25rem" alt="Roronoa Zoro Funko Pop" />
+            </div>
+
+            <!-- Informações do Produto -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col">
+                        <h3>Apple iPhone 15 Pro (128 GB)</h3>
+                        <p>
+                            O iPhone 15 Pro tem design robusto e leve em titânio aeroespacial. 
+                        </p>
+                        <div>
+                            <div class="card border-light mb-3" style="max-width: 18rem">
+                                <div class="card-header">
+                                    <h4>Detalhes do Produto</h4>
+                                </div>
+                                <div class="card-body">
+                                    <table>
+                                        <tr>
+                                            <td><strong>Marca:</strong></td>
+                                            <td>Apple</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Modelo:</strong></td>
+                                            <td>IPhone 15 Pro</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>S.O</strong></td>
+                                            <td>IOS 16</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Cor:</strong></td>
+                                            <td>Azul</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tecnologia:</strong></td>
+                                            <td>5G</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            <strong style="font-size: xx-large; color: green" id="preco">R$8.369,10</strong>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <br />
+                        <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Videos">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Fotos">Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Comentarios">Comentários</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <center>
+            <div id="videoContent" style="display: none">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UtCsWBEbBg8?si=_aE9dQ8BbsvtHcGu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </center>
+
+        <div id="fotoContent" style="display: none">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="photo text-center">
+                            <img src="https://m.media-amazon.com/images/I/41lB77BZPZL._AC_SX679_.jpg" alt="Foto 1" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="photo text-center">
+                            <img src="https://m.media-amazon.com/images/I/71aHD9IjrpL._AC_SX679_.jpg" alt="Foto 2" />
+                        </div>
+                    </div>
+                </div>    
+                </div>
+            </div>
+        </div>
+
+        <div id="comentarioContent" style="display: none">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="media mb-3">
+                            <div class="media-body">
+                                <h5 class="mt-0">Rogrigo Nestor</h5>
+                                Apple nunca decepciona! Ótimo produto!
+                            </div>
+                            <br>
+                            <div class="media mb-3">
+                                <div class="media-body">
+                                    <h5 class="mt-0">James Rodrigues</h5>
+                                    Apple é Apple né
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <script>
+        const videoLink = document.querySelector(".nav-link[href='#Videos']");
+        const fotoLink = document.querySelector(".nav-link[href='#Fotos']");
+        const comentarioLink = document.querySelector(
+            ".nav-link[href='#Comentarios']"
+        );
+        const videoContent = document.getElementById("videoContent");
+        const fotoContent = document.getElementById("fotoContent");
+        const comentarioContent = document.getElementById("comentarioContent");
+
+        videoLink.addEventListener("click", () => {
+            videoContent.style.display = "block";
+            fotoContent.style.display = "none";
+            comentarioContent.style.display = "none";
+        });
+
+        fotoLink.addEventListener("click", () => {
+            videoContent.style.display = "none";
+            fotoContent.style.display = "block";
+            comentarioContent.style.display = "none";
+        });
+
+        comentarioLink.addEventListener("click", () => {
+            videoContent.style.display = "none";
+            fotoContent.style.display = "none";
+            comentarioContent.style.display = "block";
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
