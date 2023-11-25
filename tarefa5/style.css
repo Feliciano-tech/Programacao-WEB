@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(245, 250, 248);
+}
+
+section{
+    background-color: rgb(255, 255, 255);
+    max-width: 1200px;
+    min-width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.425);
+}
+
+header{
+    background-color: white;
+}
+
+footer{
+    background-color: white;
+    position: fixed;
+    display: block;
+    visibility: hidden;
+}
